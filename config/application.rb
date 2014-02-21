@@ -79,5 +79,8 @@ module Rails3DeviseRspecCucumber
     #prevent logging of passwords
      config.filter_parameters += [:password, :password_confirmation]
   
+    # Heroku requires this to be false
+    config.assets.initialize_on_precompile=false
+
   end
 end
